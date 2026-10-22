@@ -1,4 +1,3 @@
-// vars/trivyScan.groovy
 def call(Map config = [:]) {
     def scanType = config.scanType   // 'fs' or 'image'
     def target = config.target       // path (e.g. '.') or image name
