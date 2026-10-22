@@ -10,17 +10,17 @@ pipeline {
         
         stage('Setup Tools') {
            steps {
-              setupTool("python")
+              setupTool("maven")
            }
         }
         stage('Compile') {
             steps {
-                compileApp("python")
+                compileApp("maven")
             }
         }
         stage('Test') {
             steps {
-                testApp("python")
+                testApp("maven")
             }
         }
         stage('File System Scan') {
@@ -49,7 +49,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                buildApp("python")
+                buildApp("maven")
             }
         }
 
