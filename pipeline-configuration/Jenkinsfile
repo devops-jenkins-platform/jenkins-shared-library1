@@ -25,9 +25,7 @@ pipeline {
         }
         stage('File System Scan') {
             steps {
-                container('trivy'){
                     trivyScan(scanType: 'fs', target: '.', reportName: 'trivy-fs-report.html')
-                }
                 
             }
         }
