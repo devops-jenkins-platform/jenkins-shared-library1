@@ -7,11 +7,7 @@ pipeline {
         HARBOR_CREDENTIALS = "dockerhub-credentials"
     }
     stages {
-        stage('Git Checkout') {
-           steps {
-               gitCheckout('main', 'https://github.com/devops-jenkins-platform/simple-webapp-flask', 'github-creds')
-           }
-        }
+        
         stage('Setup Tools') {
            steps {
               setupTool("python")
