@@ -5,6 +5,7 @@ def call(String language) {
         sh """
             . venv/bin/activate
             pip install pytest
+            pip install -r requirements.txt
             pytest
         """
     } else if (language == 'nodejs') {
